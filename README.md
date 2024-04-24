@@ -26,7 +26,7 @@ mergevcf.sh
 
 3. downsamplecorrectcoverage.sh downsample best coverage samples by scaling factor
 
-4. *perform imputation* (To be added)
+4. *perform imputation including downsampled individuals* (To be added)
 
-5. imputation_accuracy.sh : List of commands to oompare high coverage non-imputed genotypes to their respective downsampled imputed genotypes
+5. imputation_accuracy.sh : List of commands to compare high coverage non-imputed genotypes to their respective downsampled imputed genotypes
 
