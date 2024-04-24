@@ -1,6 +1,6 @@
 Scripts and commands to obtain SNPs from short read 150bp Illumina whole-genome sequencing of ~1900 Seychelles warblers. This includes 1) SNP calling pipeline, 2) Imputation by STITCH and 3) Assessing imputation accuracy.
 
-Scripts were run on the Sheffield University HPC. These HPCs use the SLURM queueing system, therefore core/RAM/runtimes in .sh scripts are specified in SLURM format. 
+Scripts were run on Sheffield University HPCs. These HPCs uses the SLURM queueing system, therefore core/RAM/runtimes in .sh scripts are specified in SLURM format. 
 
 1_SNP_calling_pipeline
 
