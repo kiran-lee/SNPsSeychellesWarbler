@@ -1,8 +1,11 @@
+# Seychelles warbler SNPs
+
 Scripts and commands to obtain SNPs from short read 150bp Illumina whole-genome sequencing of ~1900 Seychelles warblers. This includes 1) SNP calling pipeline, 2) Imputation by STITCH and 3) Assessing imputation accuracy.
 
 Scripts were run on Sheffield University HPCs. These HPCs uses the SLURM queueing system, therefore core/RAM/runtimes in .sh scripts are specified in SLURM format. 
 
-1_SNP_calling_pipeline
+## 1_SNP_calling_pipeline
+`cd 1_SNPs_calling_pipeline`
 
 1. https://docs.google.com/spreadsheets/d/1I1jxm78n4VoYw86xWX-zbb-yERupBtOrV2SymfiHV04/edit#gid=0 : download links to all sequenced plates 
 
@@ -10,11 +13,12 @@ Scripts were run on Sheffield University HPCs. These HPCs uses the SLURM queuein
 
 mergevcf.sh
 
-2_Imputation_STITCH
+## 2_Imputation_STITCH
 
 (To be added)
 
-3_Imputation_accuracy
+## 3_Imputation_accuracy
+`cd 3_Imputation_accuracy`
 
 1. Get coverage per sample (To be added)
 
