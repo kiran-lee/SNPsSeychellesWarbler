@@ -11,11 +11,15 @@ Scripts were run on Sheffield University HPCs. These HPCs uses the SLURM queuein
 
 2. main_submission_multi.sh : an array job that requires sequenced plate number ID as input to quality check (fastqc.sh), trim reads (trimmomatic.sh), align read to the reference genome (bwa.sh), filter mapped reads (clean_bam.sh) and call SNPs (snps.sh)
 
-mergevcf.sh
+3. mergefiltervcf.sh : merge samples from all plates, subset for SNPs for biallelic only and MAF > 0.05
+
+4. plinktobedfile.sh : convert vcf to bed file using PLINK
 
 ## 2_Imputation_STITCH
 
 (To be added)
+
+1. Convert vcf file to 
 
 ## 3_Imputation_accuracy
 `cd 3_Imputation_accuracy`
