@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=choosereferencepanel
-#SBATCH --output=choosereferencepanel
+#SBATCH --output=choosereferencepanel.log
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4
 #SBATCH --cpus-per-task=4
@@ -15,14 +15,27 @@
 source ~/.bash_profile
 
 #subset for unrelated individuals to a degree of at least 3rd-degree relationships
-#plink2 --bfile mergedimputedchromosomes --king-cutoff 0.005 --make-bed --out unrelatedimputedchromosomes --allow-extra-chr
+plink2 --bfile mergedimputedchromosomes --king-cutoff 0.005 --make-bed --out unrelatedimputedchromosomes --allow-extra-chr
 
 #tidy king in.id file
-#awk 'NR>2 {print $2}'  unrelatedimputedchromosomes.king.cutoff.in.id > unrelatedindividuals
+awk 'NR>2 {print $2}'  unrelatedimputedchromosomes.king.cutoff.in.id > unrelatedindividuals
 
 #get coverage for unrelated individuals
-file="/fastdata/bop21kgl/RawData/allplates/unrelatedindividuals"
+file="/fastdata/bop21kgl/ReferencePanel/unrelatedindividuals"
 while read line; do
 samtools depth -a $line | awk '{sum+=$3} END { print FILENAME,sum/NR}';
-done < "${file}"
+done < "${file}" > cov.txt
 
+tail -n +16 cov.txt > coverage.txt
+sed 's/^..//' coverage.txt > coveragenew.txt
+
+#get sample names
+while read line; do
+FBASE=$(basename $line);
+BASE=${FBASE%all_mapped_rehead.bam};
+echo $FBASE;
+done < "${file}" > samples.txt
+
+paste samples.txt coveragenew.txt > samplescoverage.txt
+sed 's/\t/ /' samplescoverage.txt > samplescoveragenew.txt
+sort -k 2 -n samplescoveragenew.txt > samplescoveragesorted.txt
