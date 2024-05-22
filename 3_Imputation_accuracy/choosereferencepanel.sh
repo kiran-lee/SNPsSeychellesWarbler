@@ -36,6 +36,7 @@ BASE=${FBASE%all_mapped_rehead.bam};
 echo $FBASE;
 done < "${file}" > samples.txt
 
+#merge sample names with their coverage
 paste samples.txt coveragenew.txt > samplescoverage.txt
 sed 's/\t/ /' samplescoverage.txt > samplescoveragenew.txt
 sort -k 2 -n samplescoveragenew.txt > samplescoveragesorted.txt
