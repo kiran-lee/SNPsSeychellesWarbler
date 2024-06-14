@@ -27,7 +27,6 @@ Scripts were run on Sheffield University HPCs. These HPCs uses the SLURM queuein
 ## 3_Imputation_accuracy
 `cd 3_Imputation_accuracy`
 
-### Get coverage of samples
 1. obtainsamplecoverage.sh: Get coverage per sample. You must cd into the relevant directory containing aligned .bam files first.
 
 2. decimalscoverage.sh: Concatenate coverage of all samples, convert coverage into decimals and sort samples on coverage (coverageallsorted.txt).
