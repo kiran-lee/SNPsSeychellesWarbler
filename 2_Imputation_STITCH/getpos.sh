@@ -15,10 +15,10 @@
 source ~/.bash_profile
 
 # get pos.txt file for stitch
-awk '{print $1,$4,$5,$6}' biallelicmaf.bim > biallelicmaf.txt
+awk '{print $1,$4,$5,$6}' biallelic.bim > biallelicsnplist.txt
 
 #replace space with tab
-sed -e 's/ /\t/g' biallelicmaf.txt > pos.txt
+sed -e 's/ /\t/g' biallelicsnplist.txt > pos.txt
 
 #list chromosomes in file
 awk -F ' ' '{print $1}' pos.txt | sort | uniq -c

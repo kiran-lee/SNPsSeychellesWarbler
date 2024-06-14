@@ -1909,3 +1909,14 @@
 /fastdata/bop21kgl/RawData/LIMS26757p3/Clean_aligned/574-4742_221118_L002__all_mapped_rehead.bam
 /fastdata/bop21kgl/RawData/LIMS26757p3/Clean_aligned/575-4802_221118_L002__all_mapped_rehead.bam
 /fastdata/bop21kgl/RawData/LIMS26757p3/Clean_aligned/576-4762_221118_L002__all_mapped_rehead.bam
+/fastdata/bop21kgl/RawData/LIMS26757p4/Clean_aligned/586-6037_TTGCGCCAAG-CTCGGCTATC_L004__all_mapped_rehead.bam
+/fastdata/bop21kgl/RawData/LIMS26757p4/Clean_aligned/599-5728_TGTGCGCATC-TAGTCCGTTC_L004__all_mapped_rehead.bam
+/fastdata/bop21kgl/RawData/LIMS26757p4/Clean_aligned/603-6084_TCCGCGAGTA-CGCTGAATGC_L004__all_mapped_rehead.bam
+/fastdata/bop21kgl/RawData/LIMS26757p4/Clean_aligned/607-5945_ATGTTAGACG-TTACTGCGTG_L004__all_mapped_rehead.bam
+/fastdata/bop21kgl/RawData/LIMS26757p4/Clean_aligned/612-5785_TGAGATCAAG-ACCGCTTACT_L004__all_mapped_rehead.bam
+/fastdata/bop21kgl/RawData/LIMS26757p4/Clean_aligned/621-6020_TCAGAACCTG-ACCGATCTAT_L004__all_mapped_rehead.bam
+/fastdata/bop21kgl/RawData/LIMS26757p4/Clean_aligned/628-5763_TTGGCAGATG-CGTTAATGAG_L004__all_mapped_rehead.bam
+/fastdata/bop21kgl/RawData/LIMS26757p4/Clean_aligned/630-6031_GTAATGCGGC-CGAATTCAAG_L004__all_mapped_rehead.bam
+/fastdata/bop21kgl/RawData/LIMS26757p4/Clean_aligned/644-758_TTACGGAACA-TGACTCTGTC_L004__all_mapped_rehead.bam
+/fastdata/bop21kgl/RawData/LIMS26757p4/Clean_aligned/651-6464_TCGCTTAAGC-CTAGGCGTGT_L004__all_mapped_rehead.bam
+/fastdata/bop21kgl/RawData/LIMS26757p4/Clean_aligned/661-7321_ACCTCAGTAT-ACATTCACAG_L004__all_mapped_rehead.bam

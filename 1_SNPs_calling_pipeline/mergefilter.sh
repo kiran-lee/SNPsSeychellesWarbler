@@ -20,8 +20,6 @@ bcftools merge -l vcffilestomerge -o allplatesmergedextrasamples.vcf.gz -O z
 #get only biallelic snps
 bcftools view -m2 -M2 -v snps allplatesmergedextrasamples.vcf.gz > allplatesmergedextrasamplesbiallelic.vcf.gz -O z
 
-#get only snps MAF>0.05
-bcftools view -e 'MAF>0.05'  allplatesmergedextrasamplesbiallelic.vcf.gz -O z -o allplatesmergedextrasamplesbiallelicmaf0.05.vcf.gz
 
 #rename chromosomes (don't do this as it complicates things later down the line)
 #echo "ENA|OU383783|OU383783.1_RagTag chr10" >> chr_name_conv.txt

@@ -16,9 +16,12 @@ source ~/.bash_profile
 
 #subset for unrelated individuals to a degree of at least 3rd-degree relationships
 plink2 --bfile mergedimputedchromosomes --king-cutoff 0.005 --make-bed --out unrelatedimputedchromosomes --allow-extra-chr
+plink2 --bfile mergedimputedchromosomes --king-cutoff 0.01 --make-bed --out unrelatedimputedchromosomes --allow-extra-chr
+
 
 #tidy king in.id file
 awk 'NR>2 {print $2}'  unrelatedimputedchromosomes.king.cutoff.in.id > unrelatedindividuals
+awk 'NR>2 {print $2}'  unrelatedimputedchromosomes2nddegree.king.cutoff.in.id > unrelatedindividuals2nddegree
 
 #get coverage for unrelated individuals
 file="/fastdata/bop21kgl/ReferencePanel/unrelatedindividuals"
@@ -39,3 +42,4 @@ done < "${file}" > samples.txt
 paste samples.txt coveragenew.txt > samplescoverage.txt
 sed 's/\t/ /' samplescoverage.txt > samplescoveragenew.txt
 sort -k 2 -n samplescoveragenew.txt > samplescoveragesorted.txt
+
