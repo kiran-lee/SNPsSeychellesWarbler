@@ -16,18 +16,18 @@ Scripts were run on Sheffield University HPCs. These HPCs uses the SLURM queuein
 
 ## 2_Imputation_STITCH
 
-###Prepare input files
+### Prepare input files
 1. plinktobedbiallelic.sh: Convert .vcf file to .bed file.
 2. getpos.sh: Get snp position list and split by chromosome for STITCH to use.
 3. picardreadgroup.sh: Add read group data to alligned .bam files and then index output. You must cd into the relevant directory containing aligned .bam files first.
 
-###Perform imputation
+### Perform imputation
 4. multichromosomedownsampledstitchimputationscript.sh: Array job submission to perform imputation, using STITCH for all 31 chromosomes (each of the 31 stitch*.r scripts),  for all 1922 samples (bamlistrg.txt) and their respective names (bamlist.txt).
 
 ## 3_Imputation_accuracy
 `cd 3_Imputation_accuracy`
 
-###Get coverage of samples
+### Get coverage of samples
 1. obtainsamplecoverage.sh: Get coverage per sample. You must cd into the relevant directory containing aligned .bam files first.
 
 2. decimalscoverage.sh: Concatenate coverage of all samples, convert coverage into decimals and sort samples on coverage (coverageallsorted.txt).
