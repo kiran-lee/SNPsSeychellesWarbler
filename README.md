@@ -4,6 +4,8 @@ Scripts and commands to obtain SNPs from short read 150bp Illumina whole-genome 
 
 Scripts were run on Sheffield University HPCs. These HPCs uses the SLURM queueing system, therefore core/RAM/runtimes in .sh scripts are specified in SLURM format. 
 
+Here is a link to my poster summarising the pipeline: https://docs.google.com/presentation/d/1Np5FN6HVk-SUb764ULfhkUhDWwJStjFU/edit#slide=id.p1
+
 ## 1_SNP_calling_pipeline
 `cd 1_SNPs_calling_pipeline`
 
