@@ -38,3 +38,12 @@ done > samples.txt
 paste samples.txt coveragenew.txt > samplescoverage.txt
 
 sed 's/\t/ /' samplescoverage.txt > samplescoveragenew.txt
+
+#this script links coverage to the sample filepath
+for f in Clean_aligned/[0-9]*_all_mapped_rehead.bam;
+do echo "$(cd "$(dirname "$1")" && pwd -P)/$(basename "$1")"$f;
+done > samplesfilename.txt
+
+paste samplesfilename.txt coveragenew.txt > samplesfilenamecoverage.txt
+
+sed 's/\t/ /' samplesfilenamecoverage.txt > samplesfilenamecoveragenew.txt
