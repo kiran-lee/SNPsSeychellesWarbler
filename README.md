@@ -45,5 +45,11 @@ Here is a link to my poster summarising the pipeline: https://docs.google.com/pr
 
 8. imputationaccuracy.sh : List of commands to compare in 23 high coverage samples (downsampled2.6) non-imputed genotypes to their respective downsampled, then imputed genotypes and outputting concordance per chromosome in one file (meanconcordance).
 
-9.  choosereferencepanel.sh: Commands in case we want to obtain a reference panel of high coverage, unrelated sequenced samples. Not used for now.
+9.  choosereferencepanel.sh: Commands to obtain a reference panel of higher coverage, unrelated repeat samples.
+
+10.  checkreferencepanel.sh: Script used to verify the repeated samples are indeed genetically related despite my rustiness in the wet lab (answer is yes)
+
+11.  mergereferencepanel.R: This script takes the higher coverage repeat samples and merges them with the previously sequenced samples, that have been verified as duplicates using script as in 10checkaccuracy.sh to output a set of commmands used in 12mergereference.sh
+
+12.   mergereference.sh: Commands to merge  higher coverage repeat samples with the previously sequenced samples, that have been verified as duplicates, for a final round of imputation
 
