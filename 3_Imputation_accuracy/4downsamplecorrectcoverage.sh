@@ -15,20 +15,14 @@
 
 source ~/.bash_profile
 
-#old script disused cut -sd'/' -f2 cov_x_sw_renamed > cov_x_sw_renamed2
 
 sample=`sed -n ${SLURM_ARRAY_TASK_ID}p downsamplescalingnew | awk '{print $1}'`
-multiplemeanx=`sed -n ${SLURM_ARRAY_TASK_ID}p downsamplescalingnew | awk '{print $3}'`
-# multiple1x=`sed -n ${SLURM_ARRAY_TASK_ID}p downsamplescalingnew | awk '{print $3}'`
+multiple01x=`sed -n ${SLURM_ARRAY_TASK_ID}p downsamplescalingnew | awk '{print $2}'`
 
 cp $sample .
 
-# mkdir subsamp
+mkdir subsamp
 
-## Subsample to 2.6x
-samtools view -@ 20 -bh -s ${multiplemeanx} ${sample} > "${sample}.2.6x.bam"
-samtools index "${sample}.2.6x.bam"
-
-## Subsample to 1x                                                             
-# samtools view -@ 20 -bh -s ${multiple1x} ${sample} > "${sample}.1x.bam"
-# samtools index "${sample}.1x.bam"
+## Subsample to 0.1x                                                             
+samtools view -@ 20 -bh -s ${multiple01x} ${sample} > "${sample}.0.1x.bam"
+samtools index "${sample}.0.1x.bam"
